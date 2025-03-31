@@ -5,10 +5,10 @@ go 1.24.0
 toolchain go1.24.1
 
 require (
-	github.com/Motmedel/utils_go v0.0.192
+	github.com/Motmedel/utils_go v0.0.196
 	github.com/Motmedel/utils_go/pkg/http/log v0.0.4
-	github.com/Motmedel/utils_go/pkg/http/mux v0.0.58
-	github.com/vphpersson/code_generation_go v0.0.5
+	github.com/Motmedel/utils_go/pkg/http/mux v0.0.62
+	github.com/vphpersson/code_generation_go v0.0.6
 )
 
 require (
