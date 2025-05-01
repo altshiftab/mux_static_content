@@ -54,6 +54,14 @@ func main() {
 	var addPathComment bool
 	flag.BoolVar(&addPathComment, "add-path-comment", false, "Add a comment of the path.")
 
+	var private bool
+	flag.BoolVar(
+		&private,
+		"private",
+		false,
+		"Whether the generated static content is private. Affects Cache-Control.",
+	)
+
 	flag.Parse()
 
 	if path == "" {
@@ -115,7 +123,7 @@ func main() {
 			)
 		}
 
-		specifications, err = generate.EndpointSpecificationsFromZip(zipReader, true)
+		specifications, err = generate.EndpointSpecificationsFromZip(zipReader, true, private)
 		if err != nil {
 			logger.FatalWithExitingMessage(
 				"An error occurred when creating endpoint specifications from zip data.",
@@ -125,7 +133,7 @@ func main() {
 		}
 	} else {
 		var err error
-		specifications, err = generate.EndpointSpecificationsFromDirectory(path, true)
+		specifications, err = generate.EndpointSpecificationsFromDirectory(path, true, private)
 		if err != nil {
 			logger.FatalWithExitingMessage(
 				"An error occurred when creating endpoint specifications from a directory.",
