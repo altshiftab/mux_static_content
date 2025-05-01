@@ -1,11 +1,11 @@
 github.com/Motmedel/ecs_go v0.0.55 h1:Ue8iJ3k+bSV5t3z+BN/jGVG3ju7J47qbXjy1Xco7tXc=
 github.com/Motmedel/ecs_go v0.0.55/go.mod h1:/GC2IyaRqkRtRPgADrCWBZ2tb/kkn9/Dw6jE73bRXyU=
-github.com/Motmedel/utils_go v0.0.196 h1:tPTtszGb/SJV18oHUrRMOkOZrSZ+ULZdTHKvFPUXegU=
-github.com/Motmedel/utils_go v0.0.196/go.mod h1:kKm8jM7GA8M7ICIImi5etOMixRgQfnStBPjEoCMTgbg=
+github.com/Motmedel/utils_go v0.0.198 h1:7CQi8WD2KE2PZgUi8OaqQ6a0ke3amr/nS/pIqSP5ks0=
+github.com/Motmedel/utils_go v0.0.198/go.mod h1:kKm8jM7GA8M7ICIImi5etOMixRgQfnStBPjEoCMTgbg=
 github.com/Motmedel/utils_go/pkg/http/log v0.0.4 h1:5/qTl1Gve0CkP6tWhVWKDYT13U1Wb/h0U7YiaJ99ghQ=
 github.com/Motmedel/utils_go/pkg/http/log v0.0.4/go.mod h1:VGQu3SV0SU+Sd76rsFUI5ApeEh0bZBPmNT6xmmlZkx8=
-github.com/Motmedel/utils_go/pkg/http/mux v0.0.62 h1:gtzFWfUefod1kKch2AsdMpaPfy+N4a9AIjua+it9TpE=
-github.com/Motmedel/utils_go/pkg/http/mux v0.0.62/go.mod h1:2E48HFNDiDz8crdZCYHrsk0IwmB7mmSzFiaqW/LV1iI=
+github.com/Motmedel/utils_go/pkg/http/mux v0.0.67 h1:FingLrdBc3DaFR1wxhTt83UscLQla96Z1F+ss/it+NM=
+github.com/Motmedel/utils_go/pkg/http/mux v0.0.67/go.mod h1:5+rZLY6UuKPiSgPlAg5SNTdajWsVFdfxoJkTfyvH5TA=
 github.com/Motmedel/utils_go/pkg/http/problem_detail v1.0.4 h1:FFISPMIc2zf8ZoF2uPYlGiH6A5WrK+8n9lD5dIlvTTo=
 github.com/Motmedel/utils_go/pkg/http/problem_detail v1.0.4/go.mod h1:+IxGCG8j1RnwKAKVja/lF6TPDWuWIKbrTLnDPeEkQy8=
 github.com/Motmedel/utils_go/pkg/net/domain_breakdown v0.0.3 h1:HFzFdngiLgDTyFmT3Y4GkrzULJI6xyeG/JBlmo28Cvc=
