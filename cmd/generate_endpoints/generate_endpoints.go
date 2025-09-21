@@ -7,6 +7,12 @@ import (
 	_ "embed"
 	"flag"
 	"fmt"
+	"log/slog"
+	"net/http"
+	"os"
+	"strings"
+	"time"
+
 	motmedelContext "github.com/Motmedel/utils_go/pkg/context"
 	motmedelUtilsEnv "github.com/Motmedel/utils_go/pkg/env"
 	motmedelErrors "github.com/Motmedel/utils_go/pkg/errors"
@@ -20,11 +26,6 @@ import (
 	motmedelContextLogger "github.com/Motmedel/utils_go/pkg/log/context_logger"
 	errorLogger "github.com/Motmedel/utils_go/pkg/log/error_logger"
 	"github.com/vphpersson/code_generation_go/pkg/code_generation"
-	"log/slog"
-	"net/http"
-	"os"
-	"strings"
-	"time"
 )
 
 func main() {
