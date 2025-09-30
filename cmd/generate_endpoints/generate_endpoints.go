@@ -25,7 +25,7 @@ import (
 	motmedelLog "github.com/Motmedel/utils_go/pkg/log"
 	motmedelContextLogger "github.com/Motmedel/utils_go/pkg/log/context_logger"
 	errorLogger "github.com/Motmedel/utils_go/pkg/log/error_logger"
-	"github.com/vphpersson/code_generation_go/pkg/code_generation"
+	"github.com/vphpersson/code_generation/pkg/code_generation"
 )
 
 func main() {
