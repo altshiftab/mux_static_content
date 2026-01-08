@@ -4,8 +4,8 @@ github.com/Motmedel/utils_go v0.0.324 h1:3jGdWHJPmL6H43ikOeNdfulrM3t2RtBrd9p2Tzr
 github.com/Motmedel/utils_go v0.0.324/go.mod h1:st9wrD7tyw4AM64tOD7rs0vO7tMxmXQC1Apm48B+4Q4=
 github.com/Motmedel/utils_go/pkg/http/log v0.0.8 h1:5hRJpdhAlj1FC+Cmc+IoP4RY0IqPMo8jpX3IlkzWQyI=
 github.com/Motmedel/utils_go/pkg/http/log v0.0.8/go.mod h1:bGvAmHXXrk7LNye2mBmy+LyaaYKUT/EeHAaKHl1jIpw=
-github.com/Motmedel/utils_go/pkg/http/mux v0.0.136 h1:nWMqVKiPSe/VDCHWD5lw2qRrCWvR+PiCTHlWcF+DjuA=
-github.com/Motmedel/utils_go/pkg/http/mux v0.0.136/go.mod h1:49OR2sGjw06GxHhCtf2MhJGd2QrNG5Ily5yQyXOlOR0=
+github.com/Motmedel/utils_go/pkg/http/mux v0.0.137 h1:r9XM4UZB2veZlvoeiCfuTBPvM1WvvqTIPQKzb6VJpMM=
+github.com/Motmedel/utils_go/pkg/http/mux v0.0.137/go.mod h1:49OR2sGjw06GxHhCtf2MhJGd2QrNG5Ily5yQyXOlOR0=
 github.com/Motmedel/utils_go/pkg/http/problem_detail v1.0.5 h1:W10vCKqxk8wwxvlXDD7+PA57RKZx/oOXp7fvQ/a09ag=
 github.com/Motmedel/utils_go/pkg/http/problem_detail v1.0.5/go.mod h1:NVtWalWHHrewsfTkYjUQCaR4LqKeylOX6QOFoEadAx8=
 github.com/Motmedel/utils_go/pkg/net/domain_breakdown v0.0.5 h1:57lx54tX6LbHjMNv0qGnwQB/eo7axhbDnd6rVWyWjxc=

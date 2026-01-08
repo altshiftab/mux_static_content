@@ -5,7 +5,7 @@ go 1.25
 require (
 	github.com/Motmedel/utils_go v0.0.324
 	github.com/Motmedel/utils_go/pkg/http/log v0.0.8
-	github.com/Motmedel/utils_go/pkg/http/mux v0.0.136
+	github.com/Motmedel/utils_go/pkg/http/mux v0.0.137
 	github.com/vphpersson/code_generation v0.0.9
 )
 
