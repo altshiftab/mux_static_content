@@ -1,7 +1,7 @@
 github.com/Motmedel/ecs_go v0.0.68 h1:kysZO0+33RWnNYKHOmJFxPJ5c0O420dXrfowtPobyZA=
 github.com/Motmedel/ecs_go v0.0.68/go.mod h1:F8DCLg1lwPCNbFHsY39Y1ZatxDRg7TpHU+pPaXhgLtc=
-github.com/Motmedel/utils_go v0.0.324 h1:3jGdWHJPmL6H43ikOeNdfulrM3t2RtBrd9p2TzrKK24=
-github.com/Motmedel/utils_go v0.0.324/go.mod h1:st9wrD7tyw4AM64tOD7rs0vO7tMxmXQC1Apm48B+4Q4=
+github.com/Motmedel/utils_go v0.0.329 h1:DYMRgXwb0GFOK32iIpVP2qFOgo9/O8U6kGyQ9FkYuQc=
+github.com/Motmedel/utils_go v0.0.329/go.mod h1:st9wrD7tyw4AM64tOD7rs0vO7tMxmXQC1Apm48B+4Q4=
 github.com/Motmedel/utils_go/pkg/http/log v0.0.8 h1:5hRJpdhAlj1FC+Cmc+IoP4RY0IqPMo8jpX3IlkzWQyI=
 github.com/Motmedel/utils_go/pkg/http/log v0.0.8/go.mod h1:bGvAmHXXrk7LNye2mBmy+LyaaYKUT/EeHAaKHl1jIpw=
 github.com/Motmedel/utils_go/pkg/http/mux v0.0.137 h1:r9XM4UZB2veZlvoeiCfuTBPvM1WvvqTIPQKzb6VJpMM=

@@ -21,6 +21,7 @@ import (
 	motmedelHttpLog "github.com/Motmedel/utils_go/pkg/http/log"
 	"github.com/Motmedel/utils_go/pkg/http/mux/types/endpoint_specification"
 	"github.com/Motmedel/utils_go/pkg/http/mux/utils/generate"
+	"github.com/Motmedel/utils_go/pkg/http/types/fetch_config"
 	motmedelHttpUtils "github.com/Motmedel/utils_go/pkg/http/utils"
 	motmedelLog "github.com/Motmedel/utils_go/pkg/log"
 	motmedelContextLogger "github.com/Motmedel/utils_go/pkg/log/context_logger"
@@ -91,7 +92,8 @@ func main() {
 				return nil
 			},
 		}
-		response, body, err := motmedelHttpUtils.Fetch(ctxWithHttp, path, httpClient, nil)
+
+		response, body, err := motmedelHttpUtils.Fetch(ctxWithHttp, path, fetch_config.WithHttpClient(httpClient))
 		if err != nil {
 			logger.ErrorContext(
 				motmedelContext.WithErrorContextValue(
