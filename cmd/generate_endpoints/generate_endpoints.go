@@ -19,8 +19,7 @@ import (
 	motmedelHttpContext "github.com/Motmedel/utils_go/pkg/http/context"
 	motmedelHttpErrors "github.com/Motmedel/utils_go/pkg/http/errors"
 	motmedelHttpLog "github.com/Motmedel/utils_go/pkg/http/log"
-	"github.com/Motmedel/utils_go/pkg/http/mux/types/endpoint_specification"
-	"github.com/Motmedel/utils_go/pkg/http/mux/utils/generate"
+	"github.com/Motmedel/utils_go/pkg/http/mux/types/endpoint"
 	"github.com/Motmedel/utils_go/pkg/http/types/fetch_config"
 	motmedelHttpUtils "github.com/Motmedel/utils_go/pkg/http/utils"
 	motmedelLog "github.com/Motmedel/utils_go/pkg/log"
@@ -70,7 +69,7 @@ func main() {
 		logger.FatalWithExitingMessage("Empty path.", nil)
 	}
 
-	var specifications []*endpoint_specification.EndpointSpecification
+	var endpoints []*endpoint.Endpoint
 	resultingPaths := []string{path}
 
 	if strings.HasPrefix(path, "http://") || strings.HasPrefix(path, "https://") {
@@ -96,7 +95,7 @@ func main() {
 		response, body, err := motmedelHttpUtils.Fetch(ctxWithHttp, path, fetch_config.WithHttpClient(httpClient))
 		if err != nil {
 			logger.ErrorContext(
-				motmedelContext.WithErrorContextValue(
+				motmedelContext.WithError(
 					ctxWithHttp,
 					motmedelErrors.New(fmt.Errorf("fetch: %w", err), path),
 				),
@@ -106,7 +105,7 @@ func main() {
 		}
 		if response == nil {
 			logger.ErrorContext(
-				motmedelContext.WithErrorContextValue(
+				motmedelContext.WithError(
 					ctxWithHttp,
 					motmedelErrors.New(motmedelHttpErrors.ErrNilHttpResponse, path),
 				),
@@ -126,7 +125,7 @@ func main() {
 			)
 		}
 
-		specifications, err = generate.EndpointSpecificationsFromZip(zipReader, true, private)
+		endpoints, err = endpoint.NewFromZip(zipReader, true, private)
 		if err != nil {
 			logger.FatalWithExitingMessage(
 				"An error occurred when creating endpoint specifications from zip data.",
@@ -136,7 +135,7 @@ func main() {
 		}
 	} else {
 		var err error
-		specifications, err = generate.EndpointSpecificationsFromDirectory(path, true, private)
+		endpoints, err = endpoint.NewFromDirectory(path, true, private)
 		if err != nil {
 			logger.FatalWithExitingMessage(
 				"An error occurred when creating endpoint specifications from a directory.",
@@ -147,7 +146,7 @@ func main() {
 	}
 
 	output, err := code_generation.GetGeneratedFileContents(
-		specifications,
+		endpoints,
 		packageName,
 		"github.com/altshiftab/mux_static_content/cmd/generate_endpoints",
 		variableName,
@@ -157,7 +156,7 @@ func main() {
 		logger.FatalWithExitingMessage(
 			"An error occurred when obtaining the generated file contents.",
 			fmt.Errorf("generated file contents: %w", err),
-			specifications, packageName, variableName,
+			endpoints, packageName, variableName,
 		)
 	}
 
@@ -171,7 +170,7 @@ func main() {
 	}
 
 	if fileName := code_generation.GetGeneratedFilename(); fileName != "" {
-		if err := os.WriteFile(fileName, output, 0644); err != nil {
+		if err := os.WriteFile(fileName, output, 0600); err != nil {
 			logger.FatalWithExitingMessage(
 				"An error occurred when writing the file.",
 				motmedelErrors.New(fmt.Errorf("os write file: %w", err), fileName, output),
