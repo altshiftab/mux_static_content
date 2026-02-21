@@ -18,9 +18,9 @@ import (
 	motmedelErrors "github.com/Motmedel/utils_go/pkg/errors"
 	motmedelHttpContext "github.com/Motmedel/utils_go/pkg/http/context"
 	motmedelHttpErrors "github.com/Motmedel/utils_go/pkg/http/errors"
-	motmedelHttpLog "github.com/Motmedel/utils_go/pkg/http/log"
 	"github.com/Motmedel/utils_go/pkg/http/mux/types/endpoint"
 	"github.com/Motmedel/utils_go/pkg/http/types/fetch_config"
+	"github.com/Motmedel/utils_go/pkg/http/types/http_context_extractor"
 	motmedelHttpUtils "github.com/Motmedel/utils_go/pkg/http/utils"
 	motmedelLog "github.com/Motmedel/utils_go/pkg/log"
 	motmedelContextLogger "github.com/Motmedel/utils_go/pkg/log/context_logger"
@@ -33,7 +33,7 @@ func main() {
 		Logger: motmedelContextLogger.New(
 			slog.NewJSONHandler(os.Stderr, nil),
 			&motmedelLog.ErrorContextExtractor{},
-			&motmedelHttpLog.HttpContextExtractor{},
+			&http_context_extractor.Extractor{},
 		),
 	}
 	slog.SetDefault(logger.Logger)
